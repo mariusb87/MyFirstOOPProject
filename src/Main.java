@@ -56,9 +56,27 @@ public class Main {
 
         // Exercitii OOP
 
+        Animal animal1 = new Animal();
+        Animal animal2 = new Animal("Azorel");
+        Animal animal3 = new Animal("Pisi", "gri");
+        Animal animal4 = new Animal("Nemo", "rosu", true);
 
+        animal1.mananca();
+        animal1.doarme();
+
+        animal2.mananca();
+        animal2.doarme();
+
+        animal3.mananca();
+        animal3.doarme();
+
+        animal4.mananca();
+        animal4.doarme();
+        System.out.println(animal4.afiseaza());
+
+
+        // tema
         Animal caine= new Animal("Rex","neagra",false);
-
         Animal pisica = new Animal("Tom", "albastra",false);
 
         caine.mananca();
@@ -68,6 +86,17 @@ public class Main {
         pisica.mananca();
         pisica.doarme();
         System.out.println(pisica.afiseaza());
+
+
+        // obiecte masina
+        Masina masina5 = new Masina();
+        System.out.println(masina5.marca);
+
+        Masina masina6 = new Masina("Tesla",2022);
+        System.out.println(masina6.marca+" "+ masina6.getAnFabricatie());
+
+
+
 
 
     }
