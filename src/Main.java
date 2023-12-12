@@ -95,8 +95,45 @@ public class Main {
         Masina masina6 = new Masina("Tesla",2022);
         System.out.println(masina6.marca+" "+ masina6.getAnFabricatie());
 
+        // elev
 
+        Elev elev1 = new Elev("Popescu");
+        Elev elev2 = new Elev("Ionescu");
 
+        System.out.println(elev1.nume);
+        System.out.println(elev2.nume);
+        elev1.diriginte = "Isoscel2";
+
+        System.out.println(elev2.diriginte);
+        // Static keyword - atribut comun tuturor obiectelor din aceasta clasa
+        elev1.metodaNonStatica();
+        Elev.metodaStatica();
+
+        // incapsulare
+
+        Film film1 = new Film();
+        //film1.nume = "Titanic"; - nu se poate accesa direct doar prin setters and getters
+
+        film1.setTitlu("Titanic");
+        System.out.println(film1.getTitlu());
+
+        //Abstraction and Inheritance and Polymorphism
+
+        Inotator inotator1 = new Inotator();
+        inotator1.seAntreneaza();
+        inotator1.seOdihneste();
+
+        Maratonist maratonist1 = new Maratonist();
+        maratonist1.seAntreneaza();
+        maratonist1.seOdihneste();
+
+        // exercitii OOP - Mostenire
+
+        Pisica pisica1 = new Pisica();
+        Caine caine1 = new Caine();
+
+        pisica1.scoateSunete();
+        caine1.scoateSunete();
 
 
     }
