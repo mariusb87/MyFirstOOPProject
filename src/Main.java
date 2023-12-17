@@ -118,12 +118,15 @@ public class Main {
         System.out.println(film1.getTitlu());
 
         //Abstraction and Inheritance and Polymorphism
+        //!!!!!!!!!!!! --- constructorii nu se mostenesc
+        // pentru a accesa constructorii se foloseste cuvantul "super"
+        // se mostenesc numai atributele
 
-        Inotator inotator1 = new Inotator();
+        Inotator inotator1 = new Inotator("Romania", "fluture");
         inotator1.seAntreneaza();
         inotator1.seOdihneste();
 
-        Maratonist maratonist1 = new Maratonist();
+        Maratonist maratonist1 = new Maratonist("Congo", "100 m");
         maratonist1.seAntreneaza();
         maratonist1.seOdihneste();
 
@@ -134,6 +137,22 @@ public class Main {
 
         pisica1.scoateSunete();
         caine1.scoateSunete();
+
+        //-- type casting
+        // implicit casting
+        Mamifer mamifer1 = new Pisica();
+        mamifer1.scoateSunete();
+
+        Pisica pisi1 = new Pisica();
+        Mamifer pisi2 = pisi1;
+
+        // explicit casting
+        Mamifer pisi3 = new Mamifer();
+        //Pisica pisi4 = (Pisica) new Mamifer();
+
+        ClasaC interfete = new ClasaC();
+        interfete.metodaA();
+        interfete.metodaB();
 
 
     }
